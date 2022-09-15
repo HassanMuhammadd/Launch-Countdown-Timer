@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+:root {
+    --Grayishblue: hsl(237, 18%, 59%);
+    --Softred: hsl(345, 95%, 68%);
+    --Darkdesaturatedblue: hsl(236, 21%, 26%);
+    --Verydarkblue: hsl(235, 16%, 14%);
+    --Verydarkblue: hsl(234, 17%, 12%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+main {
+    background-color: #241E2C;
+    position: relative;
+    height: 100vh;
+}
+
+.overlay {
+    background: url(pattern-hills.svg);
+    background-size: cover;
+    width: 100%;
+    height: 25%;
+    bottom: 0;
+    z-index: 1;
+}
+
+@media (max-width:770px) {
+    .overlay {
+        height: 25%;
+    }
+}
+
+.text {
+    padding-top: 80px
+}
+
+.text h4 {
+    letter-spacing: 6px;
+    max-width: 75%;
+}
+
+.icons {
+    position: relative;
+    z-index: 2;
+}
+
+.icons img {
+    cursor: pointer;
+    transition: .2s;
+}
+
+.second {
+    margin: 0 28px;
+}
+
+.icons img:hover {
+    filter: invert(54%) sepia(89%) saturate(943%) hue-rotate(305deg) brightness(97%) contrast(95%);
+}
+
+.cd {
+    margin-top: 100px!important;
+}
+
+.cd div div {
+    position: relative;
+    z-index: 1000;
+    background-color: var(--Darkdesaturatedblue);
+    border-radius: 10px;
+    box-shadow: 0 10px 0px var(--Verydarkblue);
+    color: var(--Softred);
+    letter-spacing: 2px;
+}
+
+.cd div h2 {
+    display: inline;
+}
+
+.cd div div::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: #241E2C;
+    opacity: .25;
+}
+
+.t {
+    color: var(--Grayishblue);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+@media (max-width:600px) {
+    .t {
+        font-size: 8px;
+    }
+}
